@@ -70,16 +70,16 @@ Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 
 .
 
-|Color|FG|BG|说明|
-|-----|--|--|----|
-|<font color="black">■</font>|`30`|`40`|黑色 black |
-|<font color="red"  >■</font>|`31`|`41`|红色 red|
-|<font color="green">■</font>|`32`|`42`|绿色 green |
-|<font color="yellow">■</font>|`33`|`43`|黄色 yellow |
-|<font color="blue">■</font> |`34`|`44`|蓝色 blue |
-|<font color="magenta">■</font>|`35`|`45`|品红 magenta |
-|<font color="cyan">■</font> |`36`|`46`|青色 cyan |
-|<font color="white">■</font>|`37`|`47`|白色 white |
+|FG|BG|说明|
+|--|--|----|
+|`30`|`40`|黑色 black |
+|`31`|`41`|红色 red|
+|`32`|`42`|绿色 green |
+|`33`|`43`|黄色 yellow |
+|`34`|`44`|蓝色 blue |
+|`35`|`45`|品红 magenta |
+|`36`|`46`|青色 cyan |
+|`37`|`47`|白色 white |
 
 **Examples**:
 ```
