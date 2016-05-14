@@ -33,7 +33,7 @@ import () { url="$1"; file=".bash_debug.sh"; if [[ -e "$HOME/$file" ]]; then . "
 
 **Usage**: `color STYLE FG BG`
 
-**Description**:Print color value specified by STYLE, FG and BG to stdout, e.g. `'\e[00;31;47m'`.Your can use this color value to control bash console color. If STYLE, FG or BG is '-' the previous value is used. Clear text style and color if there is no any argument. Equal to execute 'color none white black'.
+**Description**:Print color value specified by STYLE, FG and BG to stdout, e.g. `'\e[00;31;47m'`.STYLE is the style of text, FG is the foreground color of text, BG is the background color of text.Your can use this color value to control bash console color. If STYLE, FG or BG is '-', it's previous value is used. Clear text style and color if there is no any argument. Equal to execute 'color none white black'.
 
 STYLE, FG and BG can reference to table below:
 
