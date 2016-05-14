@@ -37,23 +37,23 @@ import () { url="$1"; file=".bash_debug.sh"; if [[ -e "$HOME/$file" ]]; then . "
 
 |STYLE|说明|
 |-----|----|
-|`00`|无样式 none|
-|`01`|粗体 bold|
-|`04`|下划线 underscore|
-|`05`|高亮 blink|
-|`07`|前景背景互换 reverse|
-|`08`|隐藏 concealed |
+|none|无样式 |
+|bold|粗体 |
+|underscore|下划线 |
+|blink|高亮 |
+|reverse|前景背景互换 |
+|concealed|隐藏 |
 
-|FG|BG|说明|
-|----|----|-----------|
-|`30`|`40`|黑色 black |
-|`31`|`41`|红色 red|
-|`32`|`42`|绿色 green |
-|`33`|`43`|黄色 yellow |
-|`34`|`44`|蓝色 blue |
-|`35`|`45`|品红 magenta |
-|`36`|`46`|青色 cyan |
-|`37`|`47`|白色 white |
+|FG or BG|说明|
+|----|-----------|
+|black|黑色|
+|red|红色 |
+|green|绿色|
+|yellow|黄色 |
+|blue|蓝色|
+|magenta |品红 |
+|cyan |青色 |
+|white|白色 |
 
 **Examples**:
 ```
