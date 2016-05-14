@@ -68,8 +68,10 @@ Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 |`07`|前景背景互换 reverse|
 |`08`|隐藏 concealed |
 
+.
+
 |Color|FG|BG|说明|
-|----|--|--|----|
+|-----|--|--|----|
 |<font color="black">■</font>|`30`|`40`|黑色 black |
 |<font color="red"  >■</font>|`31`|`41`|红色 red|
 |<font color="green">■</font>|`32`|`42`|绿色 green |
@@ -84,4 +86,4 @@ Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 $ echo -e "$(color blink red green)hello$(color) world"
 ```
 
-**Address**:
+**Address**:`https://github.com/whinc/bash-utils/blob/master/bash_color/bash_color.sh`
