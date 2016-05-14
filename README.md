@@ -32,7 +32,9 @@ import () { url="$1"; file=".bash_debug.sh"; if [[ -e "$HOME/$file" ]]; then . "
 ## assert 断言
 
 用法：`assert condition`
+
 说明：断言函数，如果条件成立则脚本继续执行，否则输出断言的行号、所在函数名和脚本名。condition 是一个"[[..]]"内部表达式，因此你可以使用"[[..]]"中所有的条件判断，如"str1 == str2", "1 -eq 1", "-e file"等。
+
 示例：
 ```
 # test_bash_debug.sh
