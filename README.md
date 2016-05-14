@@ -1,33 +1,6 @@
 # bash-utils
 This project include some useful utils for bash script development.e.g. color, debug, progress bar...
 
-## Install 安装
-
-You can use bash script in this project with way below:
-* copy code segment below to the top of your script
-* replace the "ADDRESS" to the real url address.
-
-```
-import ()
-{
-    url="$1"
-    file=".bash_debug.sh"
-    if [[ -e "$HOME/$file" ]]; then
-        . "$HOME/$file"
-    else
-        printf "downloading ..."
-        curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"
-        printf "\r"
-    fi
-    return 0
-}
-import "ADDRESS"
-```
-or write in exactly one line.
-```
-import () { url="$1"; file=".bash_debug.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "ADDRESS"
-```
-
 ## assert 断言
 
 **Usage**: `assert condition`
@@ -50,7 +23,10 @@ test_assert ()
 Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 ```
 
-**Address**:`https://raw.githubusercontent.com/whinc/bash-utils/master/bash_debug/bash_debug.sh`
+**Install:** Copy code below to the top of your script.
+```
+import () { url="$1"; file=".bash_debug.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "https://raw.githubusercontent.com/whinc/bash-utils/master/bash_debug/bash_debug.sh"
+```
 
 
 ## color 颜色
@@ -60,7 +36,7 @@ Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 **Description**:Print color value specified by STYLE, FG and BG to stdout, e.g. `'\e[00;31;47m'`.Your can use this color value to control bash console color.STYLE, FG and BG can reference to table below:
 
 |STYLE|说明|
-|---|----|
+|-----|----|
 |`00`|无样式 none|
 |`01`|粗体 bold|
 |`04`|下划线 underscore|
@@ -68,10 +44,8 @@ Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 |`07`|前景背景互换 reverse|
 |`08`|隐藏 concealed |
 
-.
-
 |FG|BG|说明|
-|--|--|----|
+|----|----|-----------|
 |`30`|`40`|黑色 black |
 |`31`|`41`|红色 red|
 |`32`|`42`|绿色 green |
@@ -86,4 +60,7 @@ Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 $ echo -e "$(color blink red green)hello$(color) world"
 ```
 
-**Address**:`https://github.com/whinc/bash-utils/blob/master/bash_color/bash_color.sh`
+**Install:** Copy code below to the top of your script.
+```
+import () { url="$1"; file=".bash_color.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/bash_color.sh"
+```
