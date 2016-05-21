@@ -59,7 +59,12 @@ STYLE, FG and BG can reference to table below:
 
 **Examples**:
 ```
+# "hello" string is blink style, red foreground color and green background color
 $ echo -e "$(color blink red green)hello$(color) world"
+
+# "hello" string present same as above
+# "world" string present same as "hello", but modify the foreground color to yellow.
+$ echo -e "$(color blink red green)hello$(color - yellow -) world$(color)"
 ```
 
 ![screenshot](https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/screenshot.png)
