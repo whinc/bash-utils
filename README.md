@@ -59,7 +59,7 @@ STYLE, FG and BG can reference to table below:
 
 **Examples**:
 ```
-# "hello" string is blink style, red foreground color and green background color
+# "hello" string present blink style, red foreground color and green background color
 $ echo -e "$(color blink red green)hello$(color) world"
 
 # "hello" string present same as above
@@ -71,5 +71,5 @@ $ echo -e "$(color blink red green)hello$(color - yellow -) world$(color)"
 
 **Install:** Copy code below to the top of your script.
 ```
-import () { url="$1"; file=".bash_color.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/bash_color.sh"
+import () { url="$1"; file=".bash_color.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/bash_color2.sh"
 ```
