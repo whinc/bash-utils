@@ -3,6 +3,34 @@ This project include some useful utils for bash script development.e.g. color, d
 
 该项目包含了一些有用的 Bash 脚本函数，例如控制台颜色控制、断言调试等，利用这些工具函数可以减少一些重复性的 Bash 代码编写。
 
+# Install 如何安装
+
+Import bash utils (introduct below) of this project with bash function below.Copy function below to your script.
+```
+import () 
+{ 
+    url="$1" 
+    file=".bash_color.sh"
+    if [[ -f "$HOME/$file" ]]; then 
+        . "$HOME/$file"
+    else 
+        printf "downloading ..."
+        curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"
+        printf "\r"; 
+    fi
+    return 0 
+}
+
+# or write in extractly one line.
+import () { url="$1"; file=".bash_color.sh"; if [[ -f "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; 
+```
+
+Then, invoke import function to import specified bash utils, "$URL" is the bash utils url address.
+
+```
+import "$URL"
+```
+
 ## assert 断言
 
 **Usage**: `assert condition`
@@ -25,9 +53,9 @@ test_assert ()
 Assert failed:"0 -eq 1". Location: 9 test_assert ./test_bash_debug.sh
 ```
 
-**Install:** Copy code below to the top of your script.
+**URL Adress**: 
 ```
-import () { url="$1"; file=".bash_debug.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "https://raw.githubusercontent.com/whinc/bash-utils/master/bash_debug/bash_debug.sh"
+https://raw.githubusercontent.com/whinc/bash-utils/master/bash_debug/bash_debug.sh
 ```
 
 
@@ -71,7 +99,7 @@ $ echo -e "$(color blink red green)hello$(color - yellow -) world$(color)"
 
 ![screenshot](https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/screenshot.png)
 
-**Install:** Copy code below to the top of your script.
+**URL Address**:
 ```
-import () { url="$1"; file=".bash_color.sh"; if [[ -e "$HOME/$file" ]]; then . "$HOME/$file"; else printf "downloading ..."; curl -o "$file" "$url" 2> /dev/null && mv "$file" "$HOME/$file" && . "$HOME/$file"; printf "\r"; fi; return 0; }; import "https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/bash_color2.sh"
+https://raw.githubusercontent.com/whinc/bash-utils/master/bash_color/bash_color2.sh
 ```
