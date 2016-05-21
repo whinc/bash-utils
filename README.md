@@ -1,6 +1,8 @@
 # bash-utils
 This project include some useful utils for bash script development.e.g. color, debug, progress bar...
 
+该项目包含了一些有用的 Bash 脚本函数，例如控制台颜色控制、断言调试等，利用这些工具函数可以减少一些重复性的 Bash 代码编写。
+
 ## assert 断言
 
 **Usage**: `assert condition`
